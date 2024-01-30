@@ -1,24 +1,28 @@
 package Codeup.shapes;
 
-public class Square extends Rectangle {
-    private double side;
+public class Square extends Quadrilateral {
 
     public Square(double side) {
         super(side, side);
-        this.side = side;
-    }
-
-    @Override
-    public double getArea() {
-        double area = side * side;
-        System.out.printf("Square area = %.2f.%n", area);
-        return area;
     }
 
     @Override
     public double getPerimeter() {
-        double perimeter = 4 * side;
-        System.out.printf("Square perimeter = %.2f.%n", perimeter);
-        return perimeter;
+        return 4*length;
+    }
+
+    @Override
+    public double getArea() {
+        return length*width;
+    }
+
+    @Override
+    public void setLength(double length) {
+
+    }
+
+    @Override
+    public void setWidth(double width) {
+
     }
 }
